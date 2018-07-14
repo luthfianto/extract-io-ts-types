@@ -1,7 +1,7 @@
 const vscode = require('vscode');
 const { extractInterfaces } = require("./src/extract-interface")
 
-exports.writeExtracted = function () {
+exports.writeIoTsType = function () {
     const editor = vscode.window.activeTextEditor;
     const { document, selection } = editor;
 
@@ -18,7 +18,7 @@ exports.writeExtracted = function () {
 }
 
 exports.activate = function (context) {
-    const disposable = vscode.commands.registerCommand('extension.writeExtracted', exports.writeExtracted);
+    const disposable = vscode.commands.registerCommand('extension.writeIoTsType', exports.writeIoTsType);
     context.subscriptions.push(disposable);
 }
 

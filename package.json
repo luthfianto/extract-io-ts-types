@@ -2,7 +2,7 @@
     "name": "extract-io-ts-types",
     "displayName": "extract-io-ts-types",
     "description": "Extract TypeScript interfaces to io-ts types",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "rilut",
     "repository": {
         "type": "git",
@@ -15,13 +15,13 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.writeExtracted"
+        "onCommand:extension.writeIoTsType"
     ],
     "main": "./extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.writeExtracted",
+                "command": "extension.writeIoTsType",
                 "title": "Extract io-ts type"
             }
         ],
@@ -29,7 +29,7 @@
             "editor/context": [
                 {
                     "when": "resourceLangId == typescript",
-                    "command": "extension.writeExtracted",
+                    "command": "extension.writeIoTsType",
                     "group": "1_modification"
                 }
             ]
