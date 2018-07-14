@@ -1,0 +1,1 @@
+Extract io-ts types from typescript interfaces
