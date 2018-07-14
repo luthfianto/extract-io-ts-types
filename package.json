@@ -1,0 +1,48 @@
+{
+    "name": "extract-io-ts-types",
+    "displayName": "extract-io-ts-types",
+    "description": "Extract TypeScript interfaces to io-ts types",
+    "version": "0.0.1",
+    "publisher": "rilut",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rilut/extract-io-ts-types.git"
+    },
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.writeExtracted"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.writeExtracted",
+                "title": "Extract io-ts type"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "when": "resourceLangId == typescript",
+                    "command": "extension.writeExtracted",
+                    "group": "1_modification"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "dependencies": {
+        "typescript-parser": "*"
+    },
+    "devDependencies": {
+        "vscode": "*"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:all"
+    ],
+    "jsRules": {},
+    "rules": {
+        "array-type": false,
+        "comment-format": false,
+        "forin": false,
+        "typedef": false,
+        "member-access": [
+            true,
+            "no-constructor"
+        ],
+        "member-ordering": false,
+        "newline-per-chained-call": false,
+        "no-angle-bracket-type-assertion": false,
+        "no-default-export": false,
+        "no-magic-numbers": false,
+        "no-implicit-dependencies": false,
+        "no-parameter-properties": false,
+        "no-submodule-imports": false,
+        "only-arrow-functions": false,
+        "prefer-function-over-method": false,
+        "semicolon": true
+    },
+    "rulesDirectory": []
+}
