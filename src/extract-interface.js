@@ -11,6 +11,10 @@ async function extractInterface(interfaceDeclaration) {
         const name = `${method.name}`;
 
         let returnType = method.type || "{}";
+        if (returnType.startsWith("Option<")) {
+          const t = returnType.slice("Option<".length, returnType.length);
+          returnType = `createOptionFromNullable(t.${t})`;
+        }
         if (returnType.endsWith("[]")) {
             const t = returnType.slice(0, returnType.length - 2)
             returnType = `t.array(t.${t})`;
